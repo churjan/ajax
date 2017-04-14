@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+<button id="btn">click me</button>
+<script>
+  $('#btn').click(function () {
+    $.ajax({
+      type:'GET',
+      url:'http://v.juhe.cn/cba/teamList.php?key=2c1603fcfaf437cf6867fc5f56de3a92',
+      dataType:'jsonp',
+      success(res){
+        console.dir(res);
+      },
+      error(){
+        alert('err');
+      }
+    })
+  })
+
+</script>
+</body>
+</html>

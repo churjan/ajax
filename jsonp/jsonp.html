@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="platform">
+  <p></p>
+</div>
+<script>
+  $.ajax({
+    url:'http://v.juhe.cn/toutiao/index?type=top&key=688fdb264f441a5b9ec2be9249e2f0f3&callback',
+    dataType:'jsonp',
+    jsonp:'callback',
+    success(res){
+      console.log(res);
+    }
+  })
+</script>
+</body>
+</html>
